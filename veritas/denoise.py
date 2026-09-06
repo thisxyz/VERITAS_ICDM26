@@ -1,20 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Stage 3: utility restoration via dual denoising (NFR + HOA).
 
-  * NFR (Node Feature Regularization): L1-style robust centring of the noisy
-    features.  Because the LDP-perturbed features are already unbiased and
-    (after Algorithm 2) very sparse (only m coordinates of each node are
-    non-zero), a robust per-dimension centring is the safe L1-regularised
-    denoising operator: dimensions whose empirical median equals zero (pure
-    noise / never-observed coordinates) are untouched, while coordinates
-    with a real global offset are re-centred.  The paper does not disclose
-    the exact NFR formulation; this is the design choice used here (see
-    README).
-  * HOA (High-Order Aggregator): one-shot personalised multi-hop
-    aggregation which mixes each node's features with the mean of its
-    neighbours' features; averaging reduces the variance of the LDP noise,
-    expanding the effective neighbourhood.
-"""
 import numpy as np
 
 
