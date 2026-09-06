@@ -1,7 +1,4 @@
-# VERITAS — ICDM26
-
-Trust-But-Verify: Poisoning-Resilient Locally Private Graph Learning Protocols
-
+# VERITAS
 
 ```
 ICDM26/
