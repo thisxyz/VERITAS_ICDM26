@@ -1,18 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Structure-side modules: verification-list construction (Eq. 10), KRR
-perturbation (Eq. 11) and the attestation-driven malicious-node pruning stage
-(Stage 2 of VERITAS, Eq. 13-16).
 
-Trust-level model used for the simulation (consistent with Proposition 2):
-  * benign-benign edge:      both endpoints report trust level KAPPA
-  * attacker-created (sybil) edge: the malicious node reports the maximum
-    level KAPPA while the honest victim rates the anomalous neighbour with
-    the lowest positive level 1
-  * fake-fake edge:          both endpoints report KAPPA
-Every directed claim is independently perturbed with (KAPPA+1)-ary KRR
-(Eq. 11) under privacy budget eps_a. The server sees only the perturbed
-claims and performs bilateral-attestation based pruning.
-"""
 import numpy as np
 
 KAPPA_DEFAULT = 5
