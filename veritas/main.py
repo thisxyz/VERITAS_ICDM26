@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""Run a single configuration, optionally repeating over several seeds.
-
-Example:
-  python -m veritas.main --dataset Cora --mech PM --defense veritas --seed 0
-"""
 import argparse
 import json
 
