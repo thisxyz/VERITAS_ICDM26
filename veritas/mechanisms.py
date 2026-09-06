@@ -1,25 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Node-feature LDP perturbation mechanisms (one-dimensional cores) plus the
-unified sampling pipeline (Algorithm 2 of the VERITAS paper).
 
-All mechanisms operate on values in [-1, 1] (features are pre-scaled).
-Each mechanism implements ``perturb1d(x, eps)`` returning a privatized value
-whose expectation is (approximately) x, so that the rectification step only
-needs to clip / de-bias marginal scale factors.
-
-Mechanisms:
-  1B : one-bit mechanism (Apple telemetry, Ding et al. NeurIPS'17 [28])
-  LP : Laplace mechanism (adaptive-laplace style, sensitivity 2) [36]
-  AG : analytic Gaussian mechanism (Balle & Wang ICML'18) [37]
-  SW : square wave mechanism (Li et al. SIGMOD'20 [38]) - PM-style piecewise
-  MB : multi-bit mechanism (Sajadmanesh & Gatica-Perez CCS'21 [13]) which
-       perturbs the sampled coordinate with a symmetric PM core
-  PM : piecewise mechanism (Wang et al. ICDE'19 [39]), exact Eq.(4)-(5)
-
-NOTE: this is a from-scratch re-implementation following the equations that
-appear in the paper. For mechanisms whose exact per-coordinate kernel is not
-spelled out in the paper we use the standard published definition.
-"""
 import math
 
 import numpy as np
