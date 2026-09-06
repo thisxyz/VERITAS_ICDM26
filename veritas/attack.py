@@ -1,20 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Data-poisoning attack (Algorithm 1 of the paper, threat model Sect. III-B).
 
-Black-box injection attack:
-  * injects n_atk = round(r_star * |V|) fake nodes;
-  * each fake node establishes social links with `t` randomly selected victim
-    nodes (sybil-style: the victim accepts the friendship and therefore lists
-    the fake node in its own neighbourhood);
-  * fake nodes additionally form a densely interconnected clique
-    (fake-fake coordination, S_atk in Alg. 1);
-  * fake node features are crafted (S_x) as a prototype scaled into the
-    feature domain so the attacked aggregation neighbourhoods systematically
-    deviate from clean ones.
-
-Returns the *poisoned* graph: original nodes + fake nodes, together with the
-book-keeping needed by the pipeline (fake ids, edge categories).
-"""
 import numpy as np
 
 
