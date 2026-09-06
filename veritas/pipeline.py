@@ -1,14 +1,5 @@
 # -*- coding: utf-8 -*-
-"""VERITAS pipeline (Algorithm 3) and the undefended (Baseline) counterpart.
 
-Simulation flow:
-  1. load & pre-process the dataset (per-dim scaling, random 50/25/25 split)
-  2. inject n_atk = r*|V| fake nodes with crafted features and social links
-  3. user side (Stage 1): Alg.2 feature perturbation + KRR verification list
-  4. server side: rebuild a noisy adjacency from mutually acknowledged claims
-     * Baseline: train GCN directly on the poisoned reports
-     * VERITAS : Stage 2 pruning + Stage 3 dual denoising + Stage 4 GCN
-"""
 import numpy as np
 import torch
 
