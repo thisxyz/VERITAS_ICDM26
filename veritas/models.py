@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Two-layer GCN used as the default server-side graph learner (Stage 4).
-Architecture follows the paper: 2 graph-convolution layers, hidden 64."""
+
 import torch.nn.functional as F
 from torch import nn
 
