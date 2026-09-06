@@ -1,15 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Dataset loading and pre-processing.
 
-Cora / Citeseer   : PyG Planetoid (citation networks) [42]
-LastFM            : PyG LastFMAsia (social network, 18 classes) [43]
-Twitch            : PyG Twitch 'ES' (social network, 2 classes) [43]
-
-Pre-processing (shared by every method so the comparison is fair):
-  * per-dimension scaling to [-1, 1] using the per-dimension max of |x|;
-  * a random 50 / 25 / 25 (train / validation / test) node split as in the
-    paper, reproduced per seed for the 10 independent runs.
-"""
 import numpy as np
 import torch
 
