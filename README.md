@@ -18,8 +18,6 @@ ICDM26/
 │   ├── data.py         
 │   ├── pipeline.py     
 │   └── main.py         
-├── run_fig3.py         
-├── summarize_fig3.py 
 ├── requirements.txt
 └── README.md
 ```
